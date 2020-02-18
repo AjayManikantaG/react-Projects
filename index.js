@@ -7,15 +7,14 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      name: "React",
-      id: 1
+      names: ['React', 'Angular', 'Vue']
     };
   }
 
   render() {
     return (
       <div>
-        <Hello name={this.state.name} id={this.state.id} />
+        <Hello names={this.state.names} />
         <p>Start editing to see some magic :)</p>
       </div>
     );

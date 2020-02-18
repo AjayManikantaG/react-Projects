@@ -1,10 +1,6 @@
 import React from "react";
 
 export default props => {
-  console.log(props);
-  return (
-    <h1>
-      Hello {props.name} with id {props.id}!
-    </h1>
-  );
+  console.log(props.names);
+  return props.names.map(name => <h1>Hello {name}!</h1>);
 };
