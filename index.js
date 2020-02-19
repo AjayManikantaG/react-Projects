@@ -18,7 +18,7 @@ class App extends Component {
         <p>Start editing to see some magic :)</p>
       </div>
     );
-  }
+  } 
 }
 
 render(<App />, document.getElementById("root"));
