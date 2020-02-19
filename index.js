@@ -7,18 +7,29 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      names: ['React', 'Angular', 'Vue']
+      names: ["React", "Angular", "Vue"],
+      isLogged: false
     };
   }
 
   render() {
-    return (
-      <div>
-        <Hello names={this.state.names} />
-        <p>Start editing to see some magic :)</p>
-      </div>
-    );
-  } 
+    console.log(this.state.isLogged);
+    if (this.state.isLogged) {
+      return (
+        <div>
+          <Hello names={this.state.names} />
+          <p>Start editing to see some magic in Guest Mode:)</p>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <Hello names={this.state.names} />
+          <p>Start editing to see some magic in Beast Mode :)</p>
+        </div>
+      );
+    }
+  }
 }
 
 render(<App />, document.getElementById("root"));
