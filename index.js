@@ -5,7 +5,7 @@ import "./style.css";
 
 class App extends Component {
   constructor() {
-    super();
+    super(); 
     this.state = {
       names: ["React", "Angular", "Vue"],
       isLogged: false
