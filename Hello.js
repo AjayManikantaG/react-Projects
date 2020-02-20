@@ -7,14 +7,18 @@ export default class Hello extends React.Component {
   }
 
   componentDidMount() {
-    this.inputRef.current.focus()
     console.log(this.inputRef);
+  }
+
+  clickHandler = () => {
+    alert(this.inputRef.current.value);
   }
 
   render() {
   return (
     <div>
      <input type="text" ref={this.inputRef}/>
+     <button onClick={this.clickHandler}>Click me Plz</button>
     </div>
     );
   }
