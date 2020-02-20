@@ -1,5 +1,21 @@
 import React from "react";
 
-export default props => {
-  return props.names.map(name => <h1>Hello {name}!</h1>);
+export default class Hello extends React.Component {
+  constructor() {
+    super()
+    this.inputRef = React.createRef()
+  }
+
+  componentDidMount() {
+    this.inputRef.current.focus()
+    console.log(this.inputRef);
+  }
+
+  render() {
+  return (
+    <div>
+     <input type="text" ref={this.inputRef}/>
+    </div>
+    );
+  }
 };
